@@ -5,53 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra,Papel o Tijera</title>
     <script>
-        // 1 es piedra, 2 es papel, 3 es tijera
-        let jugador = 0;
-        let pc = 2;
-        jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera");
-        //alert ("Elegiste " + jugador);
-         if(jugador == 1) {
-            alert ("elegiste ✊"); 
+        
+    
+        function eleccion = (jugada) { 
+            if (jugada == 1) {
+            resultado = "piedra ✊"; 
             }
-            else if (jugador == 2) {
-                alert ("elegiste 📄");
+            else if (jugada == 2) {
+                resultado = "papel 📄";
             }
-            else if (jugador  == 3)  {
-                alert ("elegiste tijera ✂️");
+            else if (jugada == 3)  {
+                resultado = "tijera ✂️";
             }  
             else {
-                alert ("elegiste PERDER");
+                resultado = "MAL ELEGIDO";
+
+            }
+            return resultado; { 
+
             }
 
-            if(pc == 1) {
-            alert ("pc elige ✊"); 
-            }
-            else if (pc == 2) {
-                alert ("pc elige 📄");
-            }
-            else if (pc == 3)  {
-                alert ("pc elige ✂️");
-            }  
-            else {
-                alert ("pc elige PERDER");
-            }   
-            if (pc == jugador) {  
-                alert ("EMPATE");
-            }
-            else if (jugador == 1 && pc == 3) {
-                alert ("GANASTE");
-
-            } 
-            else if (jugador == 2 && pc == 1) {
-                alert ("GANASTE");
-            }
-            else if (jugador == 3 && pc == 2) {
-                alert ("GANASTE");
-            }
-            else {  
-                alert ("PERDISTE");
             }
 
+        alert ("pc elige:" + eleccion (pc));
+        alert ("tu elige: " + eleccion (jugador));
 
           
 
