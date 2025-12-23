@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <script>
+        let jugador = 0
+        let pc = 2
+        jugador = prompt("elige: 1 piedra, 2 papel, 3 tijera")
+        
+        //ELIGE JUGADOR
+        
+        if (jugador == 1) {
+            alert("Elegiste Piedra 🥌")
+        }
+        else if (jugador == 2) {
+            alert("Elegiste Papel 📝")
+        }
+        else if (jugador == 3) {
+            alert("Elegiste tijera ✂️")
+        }
+
+        //ELIGE PC
+         
+        if (pc == 1) {
+            alert("PC Eligió Piedra 🥌")
+        }
+        else if (pc== 2 ) {
+            alert("PC Eligió Papel 📝")
+        }
+        else if (pc == 3 ) {
+            alert("PC Eligió tijera ✂️")
+
+        }
+         //RESULTADOS
+         
+         if (jugador == pc) {
+            alert("EMPATE 😒")
+         }
+
+         else if (jugador == 1 && pc == 3) {
+            alert("GANASTE 🎉")
+         }
+         else if (jugador == 2 && pc == 2) {
+            alert("EMPATE 😒")
+         }
+         else if (jugador == 2 && pc == 1) {
+            alert("GANASTE 🎉")
+         }
+
+         else if (jugador == 3 && pc == 2) {
+            alert("GANASTE 🎉")
+         }
+         else {
+            alert("PERDISTE 😢")
+         }
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
