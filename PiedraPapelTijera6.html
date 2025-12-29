@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Juego</title>
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,80 +12,59 @@
     <title>Juego</title>
     <script>
 
-        let jugador = 0
-        let pc = aleatorio(1, 3);
-        jugador = prompt ("elige: 1 piedra, 2 papel, 3 tijera")
-        alert("pc elige:" + eleccion(pc));
-        alert("tu eliges" + eleccion(jugador));
+              let jugador = 0
+              let pc = aleatorio(1, 3);
+              jugador = prompt ("elige: 1 piedra, 2 papel, 3 tijera")
+       
+              alert("Tu eliges:" + eleccion(jugador));
+              alert("Pc elige:" + eleccion(pc));
         
-        function aleatorio(min, max) { 
-            return Math.floor(Math.random() * (max - min + 1) + min)
-        }
-        function eleccion(jugada) {
-            let resultado = "";
-         if (jugada == 1) {
-            resultado = " Piedra 🥌"
-         }
-         else if (jugada == 2) {
-            resultado = " Papel 📝"
-         }
-         else if (jugada == 3) {
-            resultado = " tijera ✂️"
-        }
-        else {
-            resultado = "Elección inválida"
-        }
+              function aleatorio(min, max) { 
+              return Math.floor(Math.random() * (max - min + 1) + min)
+              }
+              function eleccion(jugada) {
+              let resultado = "";
+              if (jugada == 1) {
+              resultado = " Piedra 🥌"
+              }
+              else if (jugada == 2) {
+              resultado = " Papel 📝"
+              }
+              else if (jugada == 3) {
+              resultado = " tijera ✂️"
+              }
+              else {
+              resultado = "Elección inválida"
+              }
          
-        return resultado;
+              return resultado;
 
-
-        }
-           //ELIGE PC
+              }
+       
+              //RESULTADOS
          
-         if (pc == 1) {
-            alert("PC Eligió Piedra 🥌")
-        }
-         else if (pc== 2 ) {
-            alert("PC Eligió Papel 📝")
-        }
-         else if (pc == 3 ) {
-            alert("PC Eligió tijera ✂️")
-            }
-        
-        
-        
-        
+              if (jugador == pc) {
+              alert("EMPATE 😒")
+              }
+              else if (jugador == 1 && pc == 3) {
+              alert("GANASTE 🎉")
+              }
+              else if (jugador == 2 && pc == 2) {
+              alert("EMPATE 😒")
+              }
+              else if (jugador == 2 && pc == 1) {
+              alert("GANASTE 🎉")
+              }
+              else if (jugador == 3 && pc == 2) {
+              alert("GANASTE 🎉")
+              }
+              else {
+              alert("PERDISTE 😢")
+              }
 
-     
+      </script>
 
-        
-         //RESULTADOS
-         
-         if (jugador == pc) {
-            alert("EMPATE 😒")
-        }
-         else if (jugador == 1 && pc == 3) {
-            alert("GANASTE 🎉")
-         }
-         else if (jugador == 2 && pc == 2) {
-            alert("EMPATE 😒")
-         }
-         else if (jugador == 2 && pc == 1) {
-            alert("GANASTE 🎉")
-         }
-         else if (jugador == 3 && pc == 2) {
-            alert("GANASTE 🎉")
-        }
-         else {
-            alert("PERDISTE 😢")
-         }
-
-
-        
-
-</script>
-
-</head>
+</head> 
 <body>
     <h1>Juego de Piedra, Papel o Tijera</h1>
     
